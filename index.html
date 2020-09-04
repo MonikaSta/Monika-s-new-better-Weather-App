@@ -2,6 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script
+      src="https://kit.fontawesome.com/288b649b32.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -21,17 +32,30 @@
   <body>
     <div class="container">
       <div class="weatherApp">
-        <h1>Chicago</h1>
+        <h1>
+          <div id="current-location">
+            Enter city
+            <button type="button" class="btn btn-outline-light" id="button">
+              <i class="fas fa-location-arrow"></i>
+            </button>
+          </div>
+        </h1>
         <hr />
         <div class="container">
           <div class="row">
             <div class="col-6">
-              <span id="display-date">Monday, Aug 2</span>
+              <span id="display-date"></span>
             </div>
-            <div class="col-6"><span id="time">12:00pm</span></div>
+            <div class="col-6"><span id="display-time"></span></div>
           </div>
         </div>
-        <div id="temperature">28°C</div>
+        <div id="temperature">
+          <span id="current-temperature"> 28</span
+          ><span id="units">
+            <a href="" id="temperature-c">°C</a> /
+            <a href="" id="temperature-f">°F</a></span
+          >
+        </div>
         <div id="description">Fogy</div>
         <div class="container" id="parameters">
           <div class="row">
