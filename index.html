@@ -9,39 +9,51 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link href="styles.css" rel="stylesheet" type="css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Better Weather App</title>
   </head>
+
   <body>
-    <h1>Chicago</h1>
-    <hr />
     <div class="container">
-      <div class="row">
-        <div class="col-6">Monday 25</div>
-        <div class="col-6">12:00pm</div>
+      <div class="weatherApp">
+        <h1>Chicago</h1>
+        <hr />
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <span id="display-date">Monday, Aug 2</span>
+            </div>
+            <div class="col-6"><span id="time">12:00pm</span></div>
+          </div>
+        </div>
+        <div id="temperature">28°C</div>
+        <div id="description">Fogy</div>
+        <div class="container" id="parameters">
+          <div class="row">
+            <div class="col-4">
+              Humidity
+              <br />
+              32%
+            </div>
+            <div class="col-4">
+              Chance of rain
+              <br />
+              32%
+            </div>
+            <div class="col-4">
+              Wind<br />
+              3km/h
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div id="temperature">28°C</div>
-    <div id="feels-like-temperature">Feels like 30°C</div>
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          Humidity
-          <br />
-          32%
-        </div>
-        <div class="col-4">
-          Chance of rain
-          <br />
-          32%
-        </div>
-        <div class="col-4">
-          Wind<br />
-          3km/h
-        </div>
-      </div>
+      <div class="codedBy">Coded by Monika Stasauskiene</div>
     </div>
   </body>
-  <script type="javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </html>
