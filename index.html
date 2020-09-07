@@ -34,7 +34,9 @@
       <div class="weatherApp">
         <h1>
           <div id="current-location">
-            Enter city
+            <form id="search-form">
+                <input type="search" class="form-control" autocomplete="off" autofocus="on" id="city-input"
+                    placeholder="Search for a city..." />
             <button type="button" class="btn btn-outline-light" id="button">
               <i class="fas fa-location-arrow"></i>
             </button>
@@ -60,23 +62,20 @@
         <div class="container" id="parameters">
           <div class="row">
             <div class="col-4">
-              Humidity
-              <br />
-              32%
+              Humidity:
+              <div id="humidity"></div>
             </div>
             <div class="col-4">
               Chance of rain
-              <br />
-              32%
+              <div id="chance-of-rain"></div>
             </div>
             <div class="col-4">
-              Wind<br />
-              3km/h
+              Wind:<div id="wind"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="codedBy">Coded by Monika Stasauskiene</div>
+      <div class="codedBy"> <a href="https://github.com/MonikaSta/Monika-s-new-better-Weather-App">Open-source </a>code by Monika Stasauskiene</div>
     </div>
   </body>
   <script type="text/javascript" src="index.js"></script>

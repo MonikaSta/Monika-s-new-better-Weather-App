@@ -8,6 +8,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.form-control {
+  width: 200px;
+  display: inline;
+  margin: 0;
+}
 .weatherApp {
   margin: 15px auto 10px auto;
   background-image: linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);
@@ -24,7 +29,8 @@ a {
   text-align: center;
 }
 #current-location {
-  padding-left: 34px;
+  vertical-align: top;
+  text-align: center;
 }
 #display-time {
   margin-left: 80px;
@@ -46,4 +52,7 @@ a {
 #parameters {
   margin-top: 40px;
   text-align: center;
+}
+#button {
+  margin-top: 9px;
 }
