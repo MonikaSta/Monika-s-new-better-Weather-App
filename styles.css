@@ -56,3 +56,13 @@ a {
 #button {
   margin-top: 9px;
 }
+#description {
+  font-weight: bold;
+  font-style: italic;
+}
+#weather-icon {
+  height: 50px;
+  width: 50px;
+  font-weight: bold;
+  font-size: 17px;
+}
