@@ -28,15 +28,17 @@ a {
   margin: 0 auto;
   text-align: center;
 }
+.units {
+  position: relative;
+  font-size: 20px;
+  top: -40px;
+}
 #current-location {
   vertical-align: top;
   text-align: center;
 }
 #display-time {
   margin-left: 80px;
-}
-#units {
-  font-size: 20px;
 }
 #temperature {
   font-size: 80px;
