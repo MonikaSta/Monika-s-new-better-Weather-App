@@ -1,5 +1,5 @@
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 h1 {
   text-align: center;
@@ -15,7 +15,7 @@ a {
 }
 .weatherApp {
   margin: 15px auto 10px auto;
-  background-image: linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);
+  background-image: linear-gradient(to bottom, #fff1eb 25%, #ace0f9 95%);
   padding: 18px;
   max-width: 390px;
   height: 610px;
@@ -31,7 +31,12 @@ a {
 .units {
   position: relative;
   font-size: 20px;
-  top: -40px;
+  top: -56px;
+}
+
+.col-4 img {
+  height: 100px;
+  width: 100px;
 }
 #current-location {
   vertical-align: top;
@@ -41,27 +46,27 @@ a {
   margin-left: 80px;
 }
 #temperature {
-  font-size: 80px;
+  font-size: 100px;
   display: block;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 #description {
   text-align: center;
   position: relative;
-  margin-top: -15px;
+  margin-top: -10px;
+  text-transform: capitalize;
+  font-style: italic;
 }
 #parameters {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: center;
 }
 #button {
   margin-top: 9px;
 }
-#description {
-  font-weight: bold;
-  font-style: italic;
-}
+
 #weather-icon {
   height: 50px;
   width: 50px;

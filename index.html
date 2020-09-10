@@ -15,8 +15,8 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap"
+      rel="stylesheet"
     />
     <link href="styles.css" rel="stylesheet" type="text/css" />
 
@@ -29,11 +29,18 @@
         <h1>
           <div id="current-location">
             <form id="search-form">
-                <input type="search" class="form-control" autocomplete="off" autofocus="on" id="city-input"
-                    placeholder="Search for a city..." />
-            <button type="button" class="btn btn-outline-light" id="button">
-              <i class="fas fa-location-arrow"></i>
-            </button>
+              <input
+                type="search"
+                class="form-control"
+                autocomplete="off"
+                autofocus="on"
+                id="city-input"
+                placeholder="Search for a city..."
+              />
+              <button type="button" class="btn btn-outline-light" id="button">
+                <i class="fas fa-location-arrow"></i>
+              </button>
+            </form>
           </div>
         </h1>
         <hr />
@@ -47,7 +54,8 @@
         </div>
         <div id="temperature">
           <span id="current-temperature">28</span
-          ><span class="units"><a href="#" id="temperature-c">°C</a> |
+          ><span class="units"
+            ><a href="#" id="temperature-c">°C</a> |
             <a href="#" id="temperature-f">°F</a></span
           >
         </div>
@@ -55,23 +63,38 @@
         <div class="container" id="parameters">
           <div class="row">
             <div class="col-4">
-                <img src="https://static.thenounproject.com/png/1001987-200.png" alt="humidity icon" id="weather-icon">
+              <img
+                src="https://static.thenounproject.com/png/1001987-200.png"
+                alt="humidity icon"
+                id="weather-icon"
+              />
               Humidity:
-              <div id="humidity"> </div>
+              <div id="humidity"></div>
             </div>
             <div class="col-4">
-              Chance of rain
-              <div id="chance-of-rain"></div>
+              <img
+                src="https://www.iconfinder.com/data/icons/weatherful/72/Sunny-512.png"
+                alt="clear"
+              />
             </div>
             <div class="col-4">
-                <img src="https://img.icons8.com/ios/452/wind.png" alt="wind icon" id="weather-icon">
+              <img
+                src="https://img.icons8.com/ios/452/wind.png"
+                alt="wind icon"
+                id="weather-icon"
+              />
 
-              Wind:<div id="wind"></div>
+              Wind:
+              <div id="wind"></div>
             </div>
           </div>
         </div>
       </div>
-      <small class="codedBy"> <a href="https://github.com/MonikaSta/Monika-s-new-better-Weather-App">Open-source </a>code by Monika Stasauskiene</small>
+      <small class="codedBy">
+        <a href="https://github.com/MonikaSta/Monika-s-new-better-Weather-App"
+          >Open-source </a
+        >code by Monika Stasauskiene</small
+      >
     </div>
   </body>
   <script type="text/javascript" src="index.js"></script>
