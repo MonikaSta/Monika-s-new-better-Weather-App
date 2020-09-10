@@ -96,8 +96,8 @@ function displayMyTemp() {
   }
 
   function retrievePosition(position) {
-    let longitude = Math.round(position.coords.longitude);
-    let latitude = Math.round(position.coords.latitude);
+    let longitude = position.coords.longitude;
+    let latitude = position.coords.latitude;
     let apiKey = '980705a0ba4bf0987a707dd1c07fbc80';
     let units = 'metric';
     let urlStartPoint = 'https://api.openweathermap.org/data/2.5/weather?';
