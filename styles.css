@@ -56,8 +56,11 @@ a {
   text-align: center;
   position: relative;
   margin-top: -10px;
-  text-transform: capitalize;
   font-style: italic;
+}
+
+#description::first-letter {
+  text-transform: capitalize;
 }
 #parameters {
   margin-top: 30px;
