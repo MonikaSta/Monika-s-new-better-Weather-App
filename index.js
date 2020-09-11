@@ -54,6 +54,12 @@ function displayCityTemp(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=${units}`;
 
   function displayMoreInfo(response) {
+    document
+      .querySelector('#icon')
+      .setAttribute(
+        'src',
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
     document.querySelector('#description').innerHTML =
       response.data.weather[0].description;
     document.querySelector('#current-location').innerHTML = response.data.name;
@@ -68,8 +74,10 @@ function displayCityTemp(event) {
     )}km/h`;
     console.log(response.data);
   }
+
   axios(apiUrl).then(displayMoreInfo);
 }
+
 let cityInput = document.querySelector('#search-form');
 cityInput.addEventListener('submit', displayCityTemp);
 
@@ -93,6 +101,15 @@ function displayMyTemp() {
       response.data.wind.speed
     )}km/h`;
     console.log(response);
+    document
+      .querySelector('#icon')
+      .setAttribute(
+        'src',
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+    document
+      .querySelector('#icon')
+      .setAttribute('alt', response.data.weather[0].description);
   }
 
   function retrievePosition(position) {

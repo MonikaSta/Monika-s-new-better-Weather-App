@@ -62,17 +62,15 @@ a {
 #description::first-letter {
   text-transform: capitalize;
 }
+#weather-icons {
+  height: 40px;
+  width: 41px;
+  font-weight: bold;
+}
 #parameters {
   margin-top: 30px;
   text-align: center;
 }
 #button {
   margin-top: 9px;
-}
-
-#weather-icon {
-  height: 50px;
-  width: 50px;
-  font-weight: bold;
-  font-size: 17px;
 }
