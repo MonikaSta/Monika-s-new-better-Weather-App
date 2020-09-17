@@ -46,6 +46,7 @@ document.querySelector('#display-time').innerHTML = formatTime(now);
 function showTemperature(response) {
   let currentLocation = response.data.name;
   let temperature = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
   document.querySelector('#current-location').innerHTML = `${currentLocation}`;
   document.querySelector('#current-temperature').innerHTML = `${temperature}`;
   document.querySelector('#description').innerHTML =
@@ -97,13 +98,21 @@ function displayMyTemp() {
 
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector('#current-temperature');
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (14 * 9) / 5 + 32;
   let temperatureElement = document.querySelector('#current-temperature');
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahreinheitLink = document.querySelector('#temperature-f');
 fahreinheitLink.addEventListener('click', displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector('#temperature-c');
+celsiusLink.addEventListener('click', displayCelsiusTemp);
