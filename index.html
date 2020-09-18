@@ -26,22 +26,25 @@
   <body>
     <div class="container">
       <div class="weatherApp">
+        <div class="row">
+          <div class="col-9">
+        <form id="search-form">
+          <input
+            type="search"
+            class="form-control"
+            autocomplete="off"
+            autofocus="on"
+            id="city-input"
+            placeholder="Search for a city..."
+          /></div>
+          <div class="col-3">
+          <button type="button" class="btn btn-outline-light" id="button">
+            <i class="fas fa-location-arrow"></i>
+          </button></div>
+        </form>
+        </div>
         <h1>
-          <div id="current-location">
-            <form id="search-form">
-              <input
-                type="search"
-                class="form-control"
-                autocomplete="off"
-                autofocus="on"
-                id="city-input"
-                placeholder="Search for a city..."
-              />
-              <button type="button" class="btn btn-outline-light" id="button">
-                <i class="fas fa-location-arrow"></i>
-              </button>
-            </form>
-          </div>
+          <div id="current-location"></div>
         </h1>
         <hr />
         <div class="container">

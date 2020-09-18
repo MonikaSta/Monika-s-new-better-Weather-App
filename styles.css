@@ -3,13 +3,15 @@ body {
 }
 h1 {
   text-align: center;
+  margin: 20px;
 }
 a {
   color: inherit;
   text-decoration: none;
 }
 .form-control {
-  width: 200px;
+  width: 237px;
+  display: block;
   display: inline;
   margin: 0;
 }
@@ -35,7 +37,7 @@ a {
 }
 
 .units .active {
-  color: black;
+  color: rgb(37, 37, 37);
   cursor: default;
 }
 
@@ -46,6 +48,12 @@ a {
   height: 100px;
   width: 100px;
 }
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 #current-location {
   vertical-align: top;
   text-align: center;
@@ -80,5 +88,5 @@ a {
   text-align: center;
 }
 #button {
-  margin-top: 9px;
+  display: block;
 }

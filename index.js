@@ -116,3 +116,5 @@ fahreinheitLink.addEventListener('click', displayFahrenheitTemp);
 
 let celsiusLink = document.querySelector('#temperature-c');
 celsiusLink.addEventListener('click', displayCelsiusTemp);
+
+displayMyTemp();
