@@ -28,15 +28,23 @@ function formatDate(date) {
 
   return `${weekDay}, ${month} ${day}`;
 }
+
 function formatTime(time) {
   let hours = time.getHours();
+  return `${formatHours(time)}`;
+}
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = time.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
   return `${hours}:${minutes}`;
 }
 
@@ -68,10 +76,36 @@ function showTemperature(response) {
     .setAttribute('alt', response.data.weather[0].description);
 }
 
+function displayForcast(response) {
+  let forecastElement = document.querySelector('#forecast');
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 5; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `<div class="col-2">
+            <h3>
+              ${formatHours(forecast.dt * 1000)}
+            </h3>
+            <img src="http://openweathermap.org/img/wn/${
+              forecast.weather[0].icon
+            }@2x.png" alt="" />
+            <div class="weather-forecast-temperature">
+              <strong>${Math.round(
+                forecast.main.temp_max
+              )}°</strong> ${Math.round(forecast.main.temp_min)}°
+            </div>
+          </div>`;
+  }
+}
+
 function search(city) {
   let apiKey = '980705a0ba4bf0987a707dd1c07fbc80';
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(showTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}  &appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForcast);
 }
 function displayCityTemp(event) {
   event.preventDefault();
@@ -117,4 +151,4 @@ fahreinheitLink.addEventListener('click', displayFahrenheitTemp);
 let celsiusLink = document.querySelector('#temperature-c');
 celsiusLink.addEventListener('click', displayCelsiusTemp);
 
-displayMyTemp();
+search('Kaunas');
